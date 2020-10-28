@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="ball_detection" type="ball_detect_realsense_node" name="ball_detect_realsense_node" />
+  <node pkg="ball_detection" type="ball_detect_near_show_node" name="ball_detect_near_show_node" />
+  <node pkg="webcam" type="webcam_node" name="webcam_node" />
+  <node pkg="readmarker" type="readmarker_node" name="readmarker_node" />
+</launch>

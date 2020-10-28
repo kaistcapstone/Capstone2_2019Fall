@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find find_frontier)/launch/nav_run.launch" />
+  <include file="$(find ball_detection)/launch/ball_detect.launch" />
+  <include file="$(find data_integrate)/launch/data_integration.launch" />
+</launch>

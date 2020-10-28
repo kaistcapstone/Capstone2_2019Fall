@@ -1,0 +1,296 @@
+<HTML>
+<HEAD>
+<TITLE>Dynamixel Motor Record and Playback Motion (Synchronous Write).vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="Dynamixel Motor Record and Playback Motion _Synchronous Write_.vi"></A><H2>Dynamixel Motor Record and Playback Motion (Synchronous Write).vi</H2>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Save</B> <P>Saves the motor list, step times, positions, and speed scale to file.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Torque on</B> <P>Turn on the torque for each motor.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Initialize or Go</B> <P>Slowly moves all of the motors to the positions at <B>Frame</B>.  </P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>Frame</B> <P>The current frame in the sequence.  This corresponds to the sets of positions the motors will move to when you click <B>Go</B>.  This also corresponds to where playback starts.  This is also the frame that will be deleted when you click <B>Delete</B>.  Finally, this is the frame that <B>Insert</B> will insert recorded positions and where <B>Paste</B> will insert copied positions.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Stop Playback</B> <P>Stops playback of the motion.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Delay Time (ms)</B> <P>Time delay added after each sequence frame before the next frame is executed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Speed Scale (%)</B> <P>Speeds up or slows down the entire playback of the motion.  The step times used for play back are calculated as <B>Step Times</B> / <B>Speed Scale</B>.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Play</B> <P>Starts playback of the motion from <B>Frame</B> assuming that the motors are currently at <B>Frame</B>.  To be sure that the motors are in the correct initial position, hit <B>Go</B> before <B>Play</B>.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Delete</B> <P>Deletes the sequence frame at <B>Frame</B></P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Insert</B> <P>Same as record except <B>Insert</B> will insert the recorded positions at <B>Frame</B>.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Record</B> <P>Records the current positions of all of the motors and adds the data as a frame to the end of the sequence on the table.  <B>Step Time</B> is also recorded in the table.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="c2dstr.png" ALT="c2dstr"></P>
+</TD>
+<TD>
+<B>Display Table</B> <P>Displays the motor list, step times, and positions.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu32.png" ALT="cu32"></P>
+</TD>
+<TD>
+<B>Step Time (ms)</B> <P>How long it will take for the motors to move from the frame being recorded to the next frame.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Load</B> <P>Loads saved work, which includes: motor list, step times, positions, and speed scale.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Quit</B> <P>Stops the VI.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cvsrn.png" ALT="cvsrn"></P>
+</TD>
+<TD>
+<B>VISA resource name</B> <P>Specifies which port to use.  Serial ports that are powered on and connected to your computer are visible in the <B>VISA resource name</B> pull-down menu.  Select the resource name from the <B>VISA resource name</B> pull-down menu.  If your port does not appear in this list, enter the instrument descriptor using the following format:</P>
+<P>Interface Type[board index]::Address::INSTR.  </P>
+<P></P>
+<P><B>Examples:</B></P>
+<P><B>Serial:</B>  COM1</P>
+<P></P>
+<P>Refer to the LabVIEW Help for more information about specifying a VISA resource name.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Refresh Motor List</B> <P>Scans for connected motors starting at ID <B>Starting From</B> and ending at <B>Up to</B>.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Torque off</B> <P>Turn off the torque for each motor.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="c1dcclst.png" ALT="c1dcclst"></P>
+</TD>
+<TD>
+<B>Motor Torques</B> <P>List of motors found. You can turn individual motor torques on or off.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>Cluster</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>On</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Off</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>ID</B> </TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>From</B> <P>The first ID of a motor the program will search for.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>Up to</B> <P>The last ID of a motor the program will search for.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>Baud rate (57600 bps)</B> <P>Known or desired baud rate of the motors.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Copy</B> <P>Copies the sequence frames selected on the table.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Paste</B> <P>Pastes and inserts the copied sequence frames at <B>Frame</B>.</P>
+</TD>
+</TR>
+</Table>
+</BODY>
+</HTML>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find rplidar_ros)/launch/view_rplidar.launch"/>
+  <include file="$(find find_frontier)/launch/nav_run.launch"/>
+  <include file="$(find cmd_sub)/launch/cmd_sub_run.launch"/>
+
+</launch>

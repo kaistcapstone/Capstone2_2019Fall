@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="cnn_for_jetson" type="onboard_camera_publisher.py" name="camera_node"/>
+    <node pkg="readmarker" type="readmarker_node" name="readmarker"/>
+    <node pkg="cnn_for_jetson" type="catdog_cnn_network.py" name="catdog_cnn_network"/>
+</launch>

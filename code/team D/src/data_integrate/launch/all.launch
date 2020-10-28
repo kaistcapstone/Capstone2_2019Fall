@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name =  "c_num" default="1"/>
+  <!--node pkg="switch" type="sw_publisher" name="sw_publisher"/-->
+  <node pkg="ball_detection" type="ball_detect_node" name="ball_detect_node"/>
+
+  </node>
+<!--
+    <include file="$(find realsense2_camera s)/launch/rs_camera.launch">
+  	<param name = "align_depth" value="true"/>
+ -->
+  <node pkg="dqn" type="convert_sensor_to_image" name="convert_sensor_to_image"/>
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+
+
+
+  <!--node pkg="dqn" type="rl_dqn_network_node" name="rl_dqn_network_node"/-->
+  <!--rosparam> use_sim_time: false </rosparam-->
+</launch>

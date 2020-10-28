@@ -1,0 +1,9 @@
+[My Computer]
+My Computer = "192.168.0.2"
+
+[NI-myRIO-1900-changsigooE]
+NI-myRIO-1900-changsigooE = "172.16.0.1"
+
+[내 컴퓨터]
+내 컴퓨터 = "192.168.219.105"
+

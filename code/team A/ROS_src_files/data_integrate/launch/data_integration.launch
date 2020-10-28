@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="data_integrate" type="data_integration_pick_node" name="data_integration_pick_node" output="screen"/>
+  <node pkg="data_integrate" type="sorting_node" name="sorting_node" />
+  <node pkg="data_integrate" type="pick_node" name="pick_node" />
+</launch>

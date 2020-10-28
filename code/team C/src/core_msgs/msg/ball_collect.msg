@@ -1,0 +1,27 @@
+Header header
+
+float32 data00
+float32 data01
+float32 data02
+float32 data03
+float32 data04
+float32 data05
+float32 data06
+float32 data07
+float32 data08
+float32 data09
+float32 data10
+float32 data11
+float32 data12
+float32 data13
+float32 data14
+float32 data15
+float32 data16
+float32 data17
+float32 data18
+float32 data19
+float32 data20
+float32 data21
+float32 data22
+float32 data23
+int32 pick_start

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg = "ball_detection" type="ball_detect_node" name="ball_detect"/>
+  <node pkg = "dqn" type="convert_sensor_to_image" name="convert_sensor_to_image"/>
+  <node name = 'rl_dqn_network' pkg = "dqn" type ="rl_dqn_network.py"/>
+
+</launch>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find cmd_sub)/launch/sensor_launch.launch"/>
+  <include file="$(find cmd_sub)/launch/dqn_launch.launch"/>
+  <include file="$(find cmd_sub)/launch/pick_test.launch"/>
+
+</launch>
